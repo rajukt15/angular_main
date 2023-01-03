@@ -1,7 +1,7 @@
 <section class="movies">
   <a
     class="movie"
-    href="`/signlemovie/${{ movie.imdbID }}`"
+    [routerLink]="['/moviedetail', 1]"
     *ngFor="let movie of movieList"
   >
     <article>
