@@ -1,7 +1,12 @@
 <div>
   <form class="search-form">
     <h2>search movies</h2>
-    <input type="text" class="form-input" (input)="getMoviesData($event)" />
+    <input
+      type="text"
+      class="form-input"
+      value="batman"
+      (input)="getMoviesData($event)"
+    />
     <div className="error" *ngIf="show">Please enter the value</div>
   </form>
 </div>
