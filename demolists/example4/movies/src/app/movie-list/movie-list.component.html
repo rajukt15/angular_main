@@ -1,0 +1,16 @@
+<section class="movies">
+  <a
+    class="movie"
+    href="`/signlemovie/${{ movie.imdbID }}`"
+    *ngFor="let movie of movieList"
+  >
+    <article>
+      <img *ngIf="movie.Poster != 'N/A'" src="{{ movie.Poster }}" />
+      <img *ngIf="movie.Poster === 'N/A'" src="{{ defaultImg }}" />
+      <div class="movie-info">
+        <h4 class="title">{{ movie.Title }}</h4>
+        <p>{{ movie.Year }}</p>
+      </div>
+    </article>
+  </a>
+</section>
